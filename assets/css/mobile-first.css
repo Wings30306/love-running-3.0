@@ -124,21 +124,15 @@ h2 {
     font-family: Oswald;
     text-transform: uppercase;
     letter-spacing: 4px;
-
     width: 80%;
     height: 200px;
-
     padding-top: 40px;
     padding-left: 10px;
-
     background-color: rgba(241, 109, 107, .7);
-
     bottom: 30px;
     right: 20px;
     left: 0;
-
     position: absolute;
-
 }
 
 /* Club ethos */
@@ -381,8 +375,6 @@ hr {
         align-self: flex-end;
     }
 
-
-
     .form-section {
         box-sizing: border-box;
         display: flex;
@@ -396,7 +388,6 @@ hr {
         position: absolute;
         left: 10%;
     }
-
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -437,7 +428,6 @@ hr {
 }
 
 @media screen and (min-width: 1200px) {
-
     .about-part-one-heading,
     .about-part-two-heading {
         width: 60%;
@@ -450,5 +440,4 @@ hr {
     #menu {
         justify-content: space-between;
     }
-
 }
