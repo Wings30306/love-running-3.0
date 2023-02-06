@@ -18,7 +18,7 @@ body {
 }
 
 main {
-    margin-top: 91px; /* to make space for navbar above content */
+    margin-top: 47px; /* to make space for navbar above content */
     flex: 1 0 auto;
     /* so we can use flex-grow for child elements if the page is not filled */
     display: flex;
@@ -30,9 +30,12 @@ main {
 
 header {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    padding: 0 1rem;
+    align-items:baseline;
     position: fixed;
-    z-index: 2;
+    z-index: 999; /* high number to make sure it is on top of everything*/
     width: 100%;
     background-color: #ffffff;
     box-shadow: 0 0 5px 0 #252525;
@@ -52,7 +55,45 @@ h2 {
 }
 
 /* navigation links */
+#logo {
+    letter-spacing: 2px;
+}
 
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    display: none;
+    border-bottom: 1px solid #252525;
+}
+
+#menu {
+    font-size: 110%;
+    letter-spacing: 4px;
+    list-style: none;
+}
+
+#menu li {
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+#nav-toggle:checked ~ nav {
+    display: block;
+}
+
+.nav-toggle-label {
+    font-size: 2rem;
+}
+
+/* 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
@@ -75,7 +116,7 @@ h2 {
 
 #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
-}
+} */
 
 .active {
     border-bottom: 1px solid #3a3a3a;
@@ -123,7 +164,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 4px;
     width: 80%;
-    height: 200px;
+    min-height: 200px;
     padding-top: 40px;
     padding-left: 10px;
     background-color: rgba(241, 109, 107, .7);
@@ -197,8 +238,8 @@ hr {
 
 #circle-container {
     box-sizing: border-box;
-    width: 250px;
-    height: 250px;
+    width: 90vw;
+    height: 90vw;
     padding: 30px;
     border-style: solid;
     border-color: #cccccc;
@@ -340,8 +381,13 @@ hr {
 /* Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) {
     header {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+
+    main {
+        margin-top: 79px;
     }
 
     #logo {
@@ -350,8 +396,21 @@ hr {
         font-size: 280%;
     }
 
-    #menu li {
-        margin: 2em 1em;
+    .nav-toggle-label {
+        display: none;
+    }
+
+    nav {
+        display:block;
+        position: relative;
+        border: 0; 
+        width: fit-content;
+        padding-right: 1rem; 
+    }
+
+    #menu {
+        display: flex;
+        flex: 1;
     }
 
     #cover-text {
@@ -423,7 +482,7 @@ hr {
         padding: 20px 0;
     }
 }
-
+/* 
 @media screen and (min-width: 1200px) {
     .about-part-one-heading,
     .about-part-two-heading {
@@ -437,4 +496,4 @@ hr {
     #menu {
         justify-content: space-between;
     }
-}
+} */
