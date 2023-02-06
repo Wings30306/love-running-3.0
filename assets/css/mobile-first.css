@@ -324,6 +324,7 @@ hr {
     margin: 5px 0 20px 0;
     border: 1px solid #fafafa;
     border-radius: 2px;
+    padding: 0 5px;
 }
 
 .text-input:hover {
