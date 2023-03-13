@@ -365,6 +365,9 @@ hr {
 }
 
 /* Gallery Photos */
+.hidden-heading {
+    display: none;
+}
 
 #photo {
     line-height: 0;
